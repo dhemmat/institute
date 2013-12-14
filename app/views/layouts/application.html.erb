@@ -3,8 +3,10 @@
 <head>
   <title>GDB - Gestor de Devocionales Bah&aacute;'&iacute;s - <%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "base-admin-3" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
   <%= render 'layouts/shim' %>
 </head>
 <body>
@@ -16,9 +18,4 @@
   </div>
 
 </body>
-<script src="./js/libs/jquery-1.9.1.min.js"></script>
-<script src="./js/libs/jquery-ui-1.10.0.custom.min.js"></script>
-<script src="./js/libs/bootstrap.min.js"></script>
-<script src="./js/Application.js"></script>
-<script src="./js/demo/signin.js"></script>
 </html>
