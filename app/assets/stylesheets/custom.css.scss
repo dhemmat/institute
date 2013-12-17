@@ -1,51 +1,9 @@
 @import "bootstrap.css";
 @import "font-awesome.css";
-/*
-#navbar-title {
-	color:#FFF;
-	font-size: 1.5em;
-	display: inline-block;
-	vertical-align: middle;
-}
 
-#navbar-logo {
-	display: inline-block;
+.logo-holder {
+	position:relative;
+	float:left;
+	top:10px;
+	right:4px;
 }
-
-.login-holder{
-	font-size: 14px; 
-    padding: 15px !important;
-    border: solid thin #CCC;
-    -webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	width: 320px;
-	background: #FFF;
-	display: inline-block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.left-login-holder{
-	width: 90px;
-
-}
-
-.right-login-top-margin {
-	margin-top: 10px;
-}
-
-#remember-me-checkbox {
-	margin-bottom: 6px;
-}
-/*
-.navbar-inner{
-	min-height: 55px;
-}
-*/
-/*
-.home-left-box {
-	width: 450px;
-	display: inline-block;
-}
-*/

@@ -1,4 +1,4 @@
 class MainPagesController < ApplicationController
-  def home
+  def login
   end
 end
