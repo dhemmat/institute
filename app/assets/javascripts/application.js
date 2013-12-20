@@ -10,7 +10,15 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+//= require turbolinks
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require libs/jquery.ui.touch-punch.min
+//= require libs/bootstrap.min
+//= require libs/less-1.3.0.min
+
+
+
+
+
