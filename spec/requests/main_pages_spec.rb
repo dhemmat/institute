@@ -1,3 +1,4 @@
+=begin
 require 'spec_helper'
 
 describe "MainPages" do
@@ -16,3 +17,4 @@ describe "MainPages" do
     end
   end
 end
+=end

@@ -156,6 +156,8 @@ GEM
       multi_json (~> 1.0)
       rubyzip (< 1.0.0)
       websocket (~> 1.0.4)
+    sextant (0.2.4)
+      rails (>= 3.2)
     slop (3.4.7)
     spork (1.0.0rc4)
     spork-rails (4.0.0)
@@ -212,6 +214,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   selenium-webdriver (= 2.35.1)
+  sextant
   spork-rails (= 4.0.0)
   sqlite3
   therubyracer (~> 0.12.0)
