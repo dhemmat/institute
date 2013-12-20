@@ -11,7 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131217173215) do
+ActiveRecord::Schema.define(version: 20131220022206) do
+
+  create_table "addresses", force: true do |t|
+    t.string   "address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "devotionals", force: true do |t|
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "people", force: true do |t|
+    t.string   "firstName"
+    t.string   "middleName"
+    t.string   "lastName"
+    t.string   "secondLastName"
+    t.date     "dateOfBirth"
+    t.boolean  "bahaiStatus"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
