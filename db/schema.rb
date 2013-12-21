@@ -11,10 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131220022206) do
+ActiveRecord::Schema.define(version: 20131221003021) do
 
   create_table "addresses", force: true do |t|
     t.string   "address"
+    t.integer  "neighborhood_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "cities", force: true do |t|
+    t.string   "name"
+    t.integer  "cluster_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "clusters", force: true do |t|
+    t.string   "name"
+    t.integer  "region_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "countries", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -25,13 +46,34 @@ ActiveRecord::Schema.define(version: 20131220022206) do
     t.datetime "updated_at"
   end
 
+  create_table "neighborhoods", force: true do |t|
+    t.string   "name"
+    t.integer  "sector_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "people", force: true do |t|
-    t.string   "firstName"
-    t.string   "middleName"
-    t.string   "lastName"
-    t.string   "secondLastName"
-    t.date     "dateOfBirth"
+    t.string   "first_name"
+    t.string   "middle_name"
+    t.string   "last_name"
+    t.string   "second_last_name"
+    t.string   "nickname"
     t.boolean  "bahaiStatus"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "regions", force: true do |t|
+    t.integer  "country_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sectors", force: true do |t|
+    t.string   "name"
+    t.integer  "city_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
