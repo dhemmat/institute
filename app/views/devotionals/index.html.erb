@@ -13,6 +13,9 @@
             <tr>
               <th>ID</th>
               <th>Descripci&oacute;n</th>
+              <th>Anfitri&oacute;n</th>
+              <th>No. Participantes</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -24,6 +27,19 @@
 	            	<td>
 	            		<%= t.description %>
 	            	</td>
+                <td>
+                  <% t.devotional_participants.each do |r| %>
+                    <% if r.is_host %>
+                      - <%= "#{r.person.first_name} #{r.person.last_name}"%><br/>
+                    <% end %>
+                  <% end %>
+                </td>
+                <td>
+                  <%= t.devotional_participants.count %>
+                </td>
+                <td>
+                  <%= link_to "Ver Detalles", "#"%>
+                </td>
             	</tr>
          		<% end %>
           </tbody>

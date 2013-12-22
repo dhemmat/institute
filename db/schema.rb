@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131221003021) do
+ActiveRecord::Schema.define(version: 20131222221822) do
 
   create_table "addresses", force: true do |t|
     t.string   "address"
@@ -36,6 +36,21 @@ ActiveRecord::Schema.define(version: 20131221003021) do
 
   create_table "countries", force: true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "devotional_addresses", force: true do |t|
+    t.integer  "devotional_id"
+    t.integer  "address_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "devotional_participants", force: true do |t|
+    t.integer  "person_id"
+    t.integer  "devotional_id"
+    t.boolean  "is_host"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

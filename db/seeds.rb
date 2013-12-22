@@ -60,5 +60,15 @@ devotional_addresses = DevotionalAddress.create([
 		{devotional_id:1, address_id:1},
 		{devotional_id:1, address_id:2},
 		{devotional_id:2, address_id:2},
-		{devotional_id:3, address_id:3},
+		{devotional_id:3, address_id:3}
+	])
+
+devotional_participants = DevotionalParticipant.create([
+		{devotional_id:1, person_id:1, is_host:true},
+		{devotional_id:1, person_id:2, is_host:false},
+		{devotional_id:1, person_id:3, is_host:false},
+		{devotional_id:2, person_id:1, is_host:false},
+		{devotional_id:2, person_id:2, is_host:true},
+		{devotional_id:3, person_id:1, is_host:false},
+		{devotional_id:3, person_id:3, is_host:true}
 	])
