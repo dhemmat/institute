@@ -1,0 +1,74 @@
+<% provide(:title, 'Reuniones Devocionales: '+@devotional.description) %> 
+<div class="row">
+  <div class="col-md-12">
+  	<div class="widget stacked">
+  	  <div class="widget-header">
+  	  	<i class="icon-book"></i>
+  	  	<h3>Detalles de Reuni&oacute;n Devocional</h3>
+  	  </div>
+  	  <div class="widget-content">
+	  	  <h3><%= @devotional.description %></h3>
+	  	  <h4>Datos generales</h4>
+	  	  <table class="table table-bordered table-hover table-striped">
+          <tbody>
+          	<tr>
+          		<td>
+          			<strong>ID:</strong> 
+          		</td>
+          		<td>
+          			<%= @devotional.id %>
+          		</td>
+          	</tr>
+          	<tr>
+          		<td>
+          			<strong>Anfitriones:</strong> 
+          		</td>
+          		<td> 
+          			<% @devotional.devotional_participants.each do |devotional_participant| %>
+          				<% if devotional_participant.is_host %>
+          					<%= short_name_builder(devotional_participant.person) %><br>
+          				<% end %>
+          			<% end %>
+          		</td>
+          	</tr>
+          	<tr>
+          		<td>
+          			<strong>Direcciones:</strong> 
+          		</td>
+          		<td> 
+          			<% @devotional.devotional_addresses.each do |devotional_address| %>
+          				<%= short_address_builder(devotional_address.address) %><br>
+          			<% end %>
+          		</td>
+          	</tr>
+          </tbody>
+        </table>
+
+	  	  <h4>Participantes Actuales</h4>
+	  	  <table class="table table-bordered table-hover table-striped">
+          <thead>
+            <tr>
+              <th>Participante</th>
+            </tr>
+          </thead>
+          <tfoot>
+          	<tr>
+              <td>Participantes totales: <%= @devotional.devotional_participants.count%></td>
+            </tr>
+          </tfoot>
+          <tbody>
+            <% @devotional.devotional_participants.each do |devotional_participant| %>
+            	<tr>
+	            	<td>
+	            		<%= short_name_builder(devotional_participant.person) %>.
+	            	</td>
+            	</tr>
+         		<% end %>
+          </tbody>
+
+        </table>
+
+  	  </div>
+  	</div>
+  </div>
+</div>
