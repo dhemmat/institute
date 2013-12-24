@@ -26,11 +26,19 @@
           		<td> 
           			<% @devotional.devotional_participants.each do |devotional_participant| %>
           				<% if devotional_participant.is_host %>
-          					<%= short_name_builder(devotional_participant.person) %><br>
+          					<%= link_to short_name_builder(devotional_participant.person), person_path(devotional_participant.person)%><br>
           				<% end %>
           			<% end %>
           		</td>
           	</tr>
+            <tr>
+              <td>
+                <strong>No. Participantes Actuales:</strong> 
+              </td>
+              <td> 
+                <%= @devotional.devotional_participants.count%>
+              </td>
+            </tr>
           	<tr>
           		<td>
           			<strong>Direcciones:</strong> 
@@ -51,16 +59,12 @@
               <th>Participante</th>
             </tr>
           </thead>
-          <tfoot>
-          	<tr>
-              <td>Participantes totales: <%= @devotional.devotional_participants.count%></td>
-            </tr>
-          </tfoot>
+
           <tbody>
             <% @devotional.devotional_participants.each do |devotional_participant| %>
             	<tr>
 	            	<td>
-	            		<%= short_name_builder(devotional_participant.person) %>.
+	            		<%= link_to short_name_builder(devotional_participant.person), person_path(devotional_participant.person) %>
 	            	</td>
             	</tr>
          		<% end %>

@@ -30,7 +30,7 @@
                 <td>
                   <% t.devotional_participants.each do |r| %>
                     <% if r.is_host %>
-                      - <%= "#{r.person.first_name} #{r.person.last_name}"%><br/>
+                      <%= "#{r.person.first_name} #{r.person.last_name}"%><br/>
                     <% end %>
                   <% end %>
                 </td>

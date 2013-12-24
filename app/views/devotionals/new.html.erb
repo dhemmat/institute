@@ -1,0 +1,26 @@
+<% provide(:title, 'Reuniones Devocionales: Crear Nueva Devocional') %> 
+<div class="row">
+  <div class="col-md-12">
+  	<div class="widget stacked">
+  	  <div class="widget-header">
+  	  	<i class="icon-book"></i>
+  	  	<h3>Crear Nueva Devocional</h3>
+  	  </div>
+  	  <div class="widget-content">
+	  	  <h3>Crear Nueva Devocional</h3>
+        <br>
+        <%= form_for(@devotional, :html => { :class => "col-md-5"} ) do |f| %>
+          <div class="form-group">
+            <label>Descripci&oacute;n Devocional</label>
+            <div>
+              <%= f.text_field :description, class: 'form-control', placeholder: 'Ej: Devocional de Pedrito' %>
+            </div>
+          </div> <!-- /.form-group -->
+          <div class="form-group">
+            <%= f.submit "Crear Devocional", class: "btn btn-default" %>
+          </div>
+        <% end %>
+  	  </div>
+  	</div>
+  </div>
+</div>
