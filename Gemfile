@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 1.2'
 # Provides authentication.
 gem 'devise'
 
+# Provides json and xml formating.
+gem 'rabl'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

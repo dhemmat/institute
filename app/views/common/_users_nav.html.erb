@@ -16,26 +16,23 @@
           <li class="active">
             <a href="./index.html">
               <i class="icon-home"></i>
-              <span>Home</span>
+              <span>Inicio</span>
             </a>              
           </li>
           
           <li class="dropdown">         
             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
               <i class="icon-th"></i>
-              <span>Components</span>
+              <span>Gestiones</span>
               <b class="caret"></b>
             </a>      
           
             <ul class="dropdown-menu">
-              <li><a href="./elements.html">Elements</a></li>
-              <li><a href="./forms.html">Form Styles</a></li>
-              <li><a href="./jqueryui.html">jQuery UI</a></li>
-              <li><a href="./charts.html">Charts</a></li>
-              <li><a href="./popups.html">Popups/Notifications</a></li>
+              <li><%= link_to 'Reuniones Devocionales', devotionals_path %></li>
+              <li><%= link_to 'Personas', persons_path %></li>
             </ul>         
           </li>
-          
+          <!--
           <li class="dropdown">         
             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
               <i class="icon-copy"></i>
@@ -73,7 +70,7 @@
                   </ul>
                 </li>
             </ul>           
-          </li>
+          </li>-->
         
         </ul>
       </div> <!-- /.subnav-collapse -->

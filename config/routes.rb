@@ -5,6 +5,7 @@ Institute::Application.routes.draw do
   get "main_pages/login"
   resources :devotionals
   resources :persons
+  resources :devotional_addresses
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

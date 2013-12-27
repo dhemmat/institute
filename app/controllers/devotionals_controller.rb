@@ -20,6 +20,10 @@ class DevotionalsController < ApplicationController
     end
   end
 
+  def edit
+    @devotional = Devotional.find(params[:id])
+  end
+
   private
 
     def devotional_params
