@@ -32,4 +32,9 @@ module ApplicationHelper
 		address_string += address.neighborhood.name + ', '
 		address_string += address.neighborhood.sector.city.name + '.'
 	end
+
+	#def javascript(*files)
+  #	content_for(:head) { javascript_include_tag(*files) }#
+	#end
+
 end

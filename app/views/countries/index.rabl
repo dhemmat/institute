@@ -1,7 +1,7 @@
-object @countries
+collection @countries
  
 # Declare the properties to include
-attributes id, :name
+attributes :name, :id
  
 # Alias 'age' to 'years_old'
 #attributes :age => :years_old

@@ -1,7 +1,7 @@
 class CountriesController < ApplicationController
 	
 	respond_to :json
-	def list
+	def index
 		@countries = Country.all
 	end
 	

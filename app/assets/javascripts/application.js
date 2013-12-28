@@ -17,6 +17,7 @@
 //= require libs/jquery.ui.touch-punch.min
 //= require libs/bootstrap.min
 //= require libs/less-1.3.0.min
+//= require helpers/address_select_helper.js
 
 
 
