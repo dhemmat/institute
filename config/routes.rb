@@ -7,6 +7,11 @@ Institute::Application.routes.draw do
   resources :persons
   resources :devotional_addresses
   resources :countries
+  resources :regions
+  resources :clusters
+  resources :cities
+  resources :sectors
+  resources :neighborhoods
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -2,7 +2,7 @@ class RegionsController < ApplicationController
 
 	respond_to :json
 	def index
-		@countries = Country.all
+		@regions = Region.all
 	end
 
 end

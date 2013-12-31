@@ -2,7 +2,7 @@ class ClustersController < ApplicationController
 
 	respond_to :json
 	def index
-		@countries = Country.all
+		@clusters = Cluster.all
 	end
 
 end
